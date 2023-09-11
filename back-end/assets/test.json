@@ -1,0 +1,121 @@
+{
+  "paths": {
+    "/project1": {
+      "get": {
+        "tags": ["swagger接口1"],
+        "summary": "swagger接口1",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          },
+          {
+            "in": "query",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          },
+          {
+            "in": "path",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "获取成功",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "string", "example": "success" },
+                "results": { "type": "number", "example": 1 },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string",
+                        "example": "64db329bbf6e354b5da1e1fa"
+                      },
+                      "name": { "type": "string", "example": "项目1" },
+                      "creator": null,
+                      "type": "string",
+                      "example": "64db0ba28066ab44398fe284"
+                    },
+                    "createdTimeStamp": {
+                      "type": "number",
+                      "example": 1692086885991
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project2": {
+      "post": {
+        "tags": ["swagger接口2"],
+        "summary": "获取所有项目",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          },
+          {
+            "in": "query",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          },
+          {
+            "in": "path",
+            "name": "user",
+            "description": "用户注册",
+            "schema": { "type": "string", "example": 123456 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "获取成功",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "string", "example": "success" },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "string",
+                        "example": "64db329bbf6e354b5da1e1fa"
+                      },
+                      "name": { "type": "string", "example": "项目1" },
+                      "creator": null,
+                      "type": "string",
+                      "example": "64db0ba28066ab44398fe284"
+                    },
+                    "createdTimeStamp": {
+                      "type": "number",
+                      "example": 1692086885991
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
